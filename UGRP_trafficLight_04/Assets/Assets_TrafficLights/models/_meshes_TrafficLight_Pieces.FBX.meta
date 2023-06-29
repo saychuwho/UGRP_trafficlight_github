@@ -1,0 +1,206 @@
+fileFormatVersion: 2
+guid: 17ee1357500becf42b8eb359c4d63ebc
+timeCreated: 1561478029
+licenseType: Store
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: arm-1_bottom
+    100002: arm-1_top
+    100004: arm-2
+    100006: arm-3
+    100008: arm-4
+    100010: arm-5
+    100012: arm-6
+    100014: arm-7_bottom
+    100016: arm-7_top
+    100018: arm-8_bottom
+    100020: arm-8_top
+    100022: LIGHT_countdown_timer
+    100024: LIGHT_countdown_triangle
+    100026: LIGHT_green-1
+    100028: LIGHT_green-2
+    100030: LIGHT_green_AND_signal-2
+    100032: LIGHT_green_AND_turn-1
+    100034: LIGHT_nowalk-1
+    100036: LIGHT_nowalk-2
+    100038: LIGHT_red-1
+    100040: LIGHT_red-2
+    100042: LIGHT_turnsignal-1
+    100044: LIGHT_turnsignal-2
+    100046: LIGHT_walk-1
+    100048: LIGHT_walk-2
+    100050: LIGHT_yellow-1
+    100052: LIGHT_yellow-2
+    100054: //RootNode
+    400000: arm-1_bottom
+    400002: arm-1_top
+    400004: arm-2
+    400006: arm-3
+    400008: arm-4
+    400010: arm-5
+    400012: arm-6
+    400014: arm-7_bottom
+    400016: arm-7_top
+    400018: arm-8_bottom
+    400020: arm-8_top
+    400022: LIGHT_countdown_timer
+    400024: LIGHT_countdown_triangle
+    400026: LIGHT_green-1
+    400028: LIGHT_green-2
+    400030: LIGHT_green_AND_signal-2
+    400032: LIGHT_green_AND_turn-1
+    400034: LIGHT_nowalk-1
+    400036: LIGHT_nowalk-2
+    400038: LIGHT_red-1
+    400040: LIGHT_red-2
+    400042: LIGHT_turnsignal-1
+    400044: LIGHT_turnsignal-2
+    400046: LIGHT_walk-1
+    400048: LIGHT_walk-2
+    400050: LIGHT_yellow-1
+    400052: LIGHT_yellow-2
+    400054: //RootNode
+    2300000: arm-1_bottom
+    2300002: arm-1_top
+    2300004: arm-2
+    2300006: arm-3
+    2300008: arm-4
+    2300010: arm-5
+    2300012: arm-6
+    2300014: arm-7_bottom
+    2300016: arm-7_top
+    2300018: arm-8_bottom
+    2300020: arm-8_top
+    2300022: LIGHT_countdown_timer
+    2300024: LIGHT_countdown_triangle
+    2300026: LIGHT_green-1
+    2300028: LIGHT_green-2
+    2300030: LIGHT_green_AND_signal-2
+    2300032: LIGHT_green_AND_turn-1
+    2300034: LIGHT_nowalk-1
+    2300036: LIGHT_nowalk-2
+    2300038: LIGHT_red-1
+    2300040: LIGHT_red-2
+    2300042: LIGHT_turnsignal-1
+    2300044: LIGHT_turnsignal-2
+    2300046: LIGHT_walk-1
+    2300048: LIGHT_walk-2
+    2300050: LIGHT_yellow-1
+    2300052: LIGHT_yellow-2
+    3300000: arm-1_bottom
+    3300002: arm-1_top
+    3300004: arm-2
+    3300006: arm-3
+    3300008: arm-4
+    3300010: arm-5
+    3300012: arm-6
+    3300014: arm-7_bottom
+    3300016: arm-7_top
+    3300018: arm-8_bottom
+    3300020: arm-8_top
+    3300022: LIGHT_countdown_timer
+    3300024: LIGHT_countdown_triangle
+    3300026: LIGHT_green-1
+    3300028: LIGHT_green-2
+    3300030: LIGHT_green_AND_signal-2
+    3300032: LIGHT_green_AND_turn-1
+    3300034: LIGHT_nowalk-1
+    3300036: LIGHT_nowalk-2
+    3300038: LIGHT_red-1
+    3300040: LIGHT_red-2
+    3300042: LIGHT_turnsignal-1
+    3300044: LIGHT_turnsignal-2
+    3300046: LIGHT_walk-1
+    3300048: LIGHT_walk-2
+    3300050: LIGHT_yellow-1
+    3300052: LIGHT_yellow-2
+    4300000: arm-3
+    4300002: arm-4
+    4300004: arm-5
+    4300006: arm-6
+    4300008: arm-1_top
+    4300010: arm-1_bottom
+    4300012: arm-2
+    4300014: arm-7_top
+    4300016: arm-7_bottom
+    4300018: arm-8_top
+    4300020: arm-8_bottom
+    4300022: LIGHT_countdown_triangle
+    4300024: LIGHT_nowalk-1
+    4300026: LIGHT_walk-1
+    4300028: LIGHT_countdown_timer
+    4300030: LIGHT_red-1
+    4300032: LIGHT_yellow-1
+    4300034: LIGHT_green-1
+    4300036: LIGHT_turnsignal-1
+    4300038: LIGHT_nowalk-2
+    4300040: LIGHT_walk-2
+    4300042: LIGHT_green-2
+    4300044: LIGHT_red-2
+    4300046: LIGHT_yellow-2
+    4300048: LIGHT_turnsignal-2
+    4300050: LIGHT_green_AND_turn-1
+    4300052: LIGHT_green_AND_signal-2
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

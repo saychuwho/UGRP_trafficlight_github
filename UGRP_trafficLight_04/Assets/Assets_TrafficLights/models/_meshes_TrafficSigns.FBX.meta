@@ -1,0 +1,171 @@
+fileFormatVersion: 2
+guid: 378457a36e0020345abbd572b0697616
+timeCreated: 1561480055
+licenseType: Store
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: hanger-1
+    100002: //RootNode
+    100004: pole_arm-1
+    100006: pole_arm-2
+    100008: sign_bikeroute
+    100010: sign_donotenter
+    100012: sign_handicap
+    100014: sign_oneway
+    100016: sign_schoolzone
+    100018: sign_stop
+    100020: sign_stoplight
+    100022: sign_uturn
+    100024: sign_wrongwray
+    100026: sign_yield
+    100028: street_sign-1
+    100030: street_sign-2
+    100032: street_sign-3
+    100034: traffic_sign_joint-1
+    100036: traffic_sign_rails-1
+    100038: traffic_sign_rails-2
+    100040: traffic_sign_rails-3
+    400000: hanger-1
+    400002: //RootNode
+    400004: pole_arm-1
+    400006: pole_arm-2
+    400008: sign_bikeroute
+    400010: sign_donotenter
+    400012: sign_handicap
+    400014: sign_oneway
+    400016: sign_schoolzone
+    400018: sign_stop
+    400020: sign_stoplight
+    400022: sign_uturn
+    400024: sign_wrongwray
+    400026: sign_yield
+    400028: street_sign-1
+    400030: street_sign-2
+    400032: street_sign-3
+    400034: traffic_sign_joint-1
+    400036: traffic_sign_rails-1
+    400038: traffic_sign_rails-2
+    400040: traffic_sign_rails-3
+    2300000: hanger-1
+    2300002: pole_arm-1
+    2300004: pole_arm-2
+    2300006: sign_bikeroute
+    2300008: sign_donotenter
+    2300010: sign_handicap
+    2300012: sign_oneway
+    2300014: sign_schoolzone
+    2300016: sign_stop
+    2300018: sign_stoplight
+    2300020: sign_uturn
+    2300022: sign_wrongwray
+    2300024: sign_yield
+    2300026: street_sign-1
+    2300028: street_sign-2
+    2300030: street_sign-3
+    2300032: traffic_sign_joint-1
+    2300034: traffic_sign_rails-1
+    2300036: traffic_sign_rails-2
+    2300038: traffic_sign_rails-3
+    3300000: hanger-1
+    3300002: pole_arm-1
+    3300004: pole_arm-2
+    3300006: sign_bikeroute
+    3300008: sign_donotenter
+    3300010: sign_handicap
+    3300012: sign_oneway
+    3300014: sign_schoolzone
+    3300016: sign_stop
+    3300018: sign_stoplight
+    3300020: sign_uturn
+    3300022: sign_wrongwray
+    3300024: sign_yield
+    3300026: street_sign-1
+    3300028: street_sign-2
+    3300030: street_sign-3
+    3300032: traffic_sign_joint-1
+    3300034: traffic_sign_rails-1
+    3300036: traffic_sign_rails-2
+    3300038: traffic_sign_rails-3
+    4300000: sign_oneway
+    4300002: traffic_sign_joint-1
+    4300004: traffic_sign_rails-1
+    4300006: traffic_sign_rails-2
+    4300008: pole_arm-1
+    4300010: pole_arm-2
+    4300012: street_sign-1
+    4300014: street_sign-2
+    4300016: street_sign-3
+    4300018: traffic_sign_rails-3
+    4300020: sign_yield
+    4300022: sign_donotenter
+    4300024: sign_stop
+    4300026: sign_wrongwray
+    4300028: sign_uturn
+    4300030: sign_bikeroute
+    4300032: sign_handicap
+    4300034: sign_schoolzone
+    4300036: sign_stoplight
+    4300038: hanger-1
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
