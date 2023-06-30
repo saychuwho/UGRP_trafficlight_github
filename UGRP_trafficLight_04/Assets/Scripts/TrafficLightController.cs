@@ -9,27 +9,67 @@ public class TrafficLightController : MonoBehaviour
 
     public int startingTrafficIndex = 0;
 
-    int CurrentTrafficLightIndex;
-    int CurrentPedestrainLightIndex;
-    
     // Start is called before the first frame update
     void Start()
     {
-        CurrentTrafficLightIndex = startingTrafficIndex;
-        CurrentPedestrainLightIndex = startingTrafficIndex;
+        foreach(traffic_light_UGRP trafficlight in trafficLights)
+        {
+            trafficlight.lightDuration.Add(3);
+            trafficlight.lightDuration.Add(3);
+            trafficlight.lightDuration.Add(3);
+            trafficlight.lightDuration.Add(3);
+            trafficlight.lightStates = new LightStates(trafficlight.trafficLightType).lightStates;
+
+            trafficlight.currentLightStateDuration = Time.time + trafficlight.lightDuration[trafficlight.currentLightStateIndex];
+               
+            int tempLightIndex = 0;
+            foreach(int lightstate in trafficlight.lightStates[trafficlight.currentLightStateIndex])
+            {
+                if(lightstate == 1)
+                {
+                    trafficlight.LightOn(tempLightIndex);
+                }
+                else
+                {
+                    trafficlight.LightOff(tempLightIndex);
+                }
+                tempLightIndex++;
+            }
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(trafficLights.Length > 1)
+        if(trafficLights.Length >= 1)
         {
             foreach(traffic_light_UGRP trafficlight in trafficLights)
             {
-                for(int i=0;i<trafficlight.lights.Length;i++)
+                if(trafficlight.lights.Length > 1)
                 {
-                    trafficlight.ChangeLights(i);
-                }
+                    if(trafficlight.currentLightStateDuration <= Time.time)
+                    {
+                        trafficlight.currentLightStateIndex++;
+                        if (trafficlight.currentLightStateIndex >= trafficlight.lightStates.Count)
+                            trafficlight.currentLightStateIndex = 0;
+
+                        int tempLightIndex = 0;
+                        foreach (int lightstate in trafficlight.lightStates[trafficlight.currentLightStateIndex])
+                        {
+                            if (lightstate == 1)
+                            {
+                                trafficlight.LightOn(tempLightIndex);
+                            }
+                            else
+                            {
+                                trafficlight.LightOff(tempLightIndex);
+                            }
+                            tempLightIndex++;
+                        }
+
+                        trafficlight.currentLightStateDuration = Time.time + trafficlight.lightDuration[trafficlight.currentLightStateIndex];
+                    }
+                }       
             }
         }
     }

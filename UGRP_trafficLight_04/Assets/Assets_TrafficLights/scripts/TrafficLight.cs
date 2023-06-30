@@ -49,6 +49,7 @@ public class TrafficLight : MonoBehaviour
                     m_iCurrentLightIndex = 0;
 
                 SetCurrentLight();
+                /*
                 foreach (GameObject light in lights)
                 {
                     string name = lights[m_iCurrentLightIndex].name;
@@ -73,6 +74,7 @@ public class TrafficLight : MonoBehaviour
                         light.transform.parent.gameObject.tag = "green";
                     }
                 }
+                */
 
                 m_flChangeLightTime = Time.time + lightDuration[m_iCurrentLightIndex];
             }
