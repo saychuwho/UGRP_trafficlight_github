@@ -7,6 +7,9 @@ public class traffic_light_UGRP : MonoBehaviour
     // 현재 신호등이 어떤 type을 가지는가를 나타내는 변수
     public int trafficLightType = 0;
 
+    // 현재 신호등이 어떤 위치에 있는지를 나타내는 변수
+    public int trafficLightLocation = 0;
+
     // code idea's from "Animating Traffic lights / Street Lamps / Signs" by Kobra Game Studios
     // 여기에는 반드시 신호등 불 순서대로 집어넣어야 한다.
     public GameObject[] lights;
@@ -23,7 +26,7 @@ public class traffic_light_UGRP : MonoBehaviour
     public List<int[]> lightStates = new List<int[]>();
 
     // 상태들이 어떤 길이 만큼 불이 들어올지를 결정
-    public List<float> lightDuration;
+    public List<float> lightDuration = new List<float>();
 
     // 현재 어떤 상태로 불이 들어와야 하는지를 나타내는 변수
     public int currentLightStateIndex = 0;
@@ -31,15 +34,17 @@ public class traffic_light_UGRP : MonoBehaviour
     // 현재 상태가 얼마나 지속되어야 하는가를 나타내는 변수
     public float currentLightStateDuration;
 
+    // 황색등이 들어오는 lightState가 얼마나 있는지를 나타내는 변수
+    public int yellowNum = 0;
+
 
     // Start is called before the first frame update
     void Start()
     {
-        
-        ResetLight();
+        // all init of trafficlight will be done in TrafficLightController
     }
 
-    void ResetLight()
+    public void ResetLight()
     {
         foreach (GameObject light in lights)
         {
@@ -58,6 +63,10 @@ public class traffic_light_UGRP : MonoBehaviour
     // 한꺼번에 여러개의 불이 들어올 수 있다
     public void LightOn(int lightIndex)
     {
+        // Debug.Log("trafficLight name : " + this.name);
+        // Debug.Log("lightIndex : " + lightIndex.ToString());
+        // Debug.Log("length of m_iCurrentLightIndex : " + m_iCurrentLightIndex.Count.ToString());
+        
         lights[lightIndex].SetActive(true);
         m_iCurrentLightIndex[lightIndex] = 1;
     }
@@ -70,6 +79,24 @@ public class traffic_light_UGRP : MonoBehaviour
         m_iCurrentLightIndex[lightIndex] = 0;
     }
 
+    // lightIndex를 받으면 해당하는 lightstate를 켜는 함수
+    public void TurnLightState(int lightstateindex)
+    {
+        int tempLightIndex = 0;
+        foreach(int lightstate in lightStates[lightstateindex])
+        {
+            if (lightstate == 1)
+            {
+                LightOn(tempLightIndex);
+            }
+            else
+            {
+                LightOff(tempLightIndex);
+            }
+            tempLightIndex++;
+        }
+    }
+
     // Update는 TrafficLightController.cs에서 이루어질 예정이다.
     // Update is called once per frame
     void Update()
@@ -77,3 +104,4 @@ public class traffic_light_UGRP : MonoBehaviour
         
     }
 }
+

@@ -1,15 +1,8 @@
 fileFormatVersion: 2
-guid: 091ef330061ec124bb736ef5cbd4f920
-labels:
-- car
-- vehicle
-- wheel
-- tire
-- physics
-- bus
-- truck
-- suspension
-- skidmark
-- pickup
-- carpaint
-- driving
+guid: fccbd9ebbd585ce439d1ffc1a97eb3d0
+folderAsset: yes
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
