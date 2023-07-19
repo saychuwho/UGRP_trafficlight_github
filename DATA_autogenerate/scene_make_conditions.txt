@@ -1,0 +1,15 @@
+//0 : ego position
+//1 : car action - 0: 직진, 1 : 우회전, 2: 좌회전, 3: U턴
+//2 : ped1 postion - 0 : 없음, 1 : 보행 중
+//3 : ped2 postion - 0 : 없음, 1 : 보행 중
+//4 : ped signal1 condition- 0 : 없음, 1 : 있음
+//5 : ped signal2 condition- 0 : 없음, 1 : 있음
+//6 : car signal1 condition- 0 : 없음, 1 : 있음
+//7 : car signal2 condition- 0 : 없음, 1 : 있음
+
+ped light : red : 0  , green : 1
+traffic light : red 0 green 1 yellow 2 turn left 3
+
+//
+직좌동시 + 우회전
+traffic light : green+left : 6
