@@ -16,4 +16,7 @@ public class ped_light_UGRP : traffic_light_UGRP
 
     // 보행자 신호등을 기준으로 오른쪽 우회전 신호등
     public int pedControlRightlight = 0;
+
+    // child light
+    public ped_light_UGRP[] pedChildLights;
 }

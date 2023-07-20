@@ -341,7 +341,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3249577764374536080}
-  - component: {fileID: 7984934379578224065}
+  - component: {fileID: 5258602406436130213}
   m_Layer: 0
   m_Name: UGRP_trafficLight_02
   m_TagString: Untagged
@@ -368,7 +368,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7984934379578224065
+--- !u!114 &5258602406436130213
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -377,10 +377,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 8894450317719732245}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b0932e79b3380614eac50d5ef2c3db8b, type: 3}
+  m_Script: {fileID: 11500000, guid: 2c800347de97fdb4aaeaf23cb299e5d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trafficLightType: 510
+  trafficLightType: 0
   trafficLightLocation: 0
   lights:
   - {fileID: 1179544770795541108}
@@ -391,3 +391,4 @@ MonoBehaviour:
   currentLightStateIndex: 0
   currentLightStateDuration: 0
   yellowNum: 0
+  childLights: []

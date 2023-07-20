@@ -38,7 +38,7 @@ public class traffic_light_UGRP : MonoBehaviour
     public int yellowNum = 0;
 
     // child light : 자신의 행동과 동일한 행동을 하는 light를 표현
-    public traffic_light_UGRP[] childLights;
+    // public traffic_light_UGRP[] childLights;
 
     
     // Start is called before the first frame update

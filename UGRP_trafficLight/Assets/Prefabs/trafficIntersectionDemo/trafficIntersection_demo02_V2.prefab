@@ -9,9 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4858298029741588763}
-  - component: {fileID: 153194277131167813}
+  - component: {fileID: 5470991911375292278}
   m_Layer: 0
-  m_Name: trafficIntersection_demo02
+  m_Name: trafficIntersection_demo02_V2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -44,7 +44,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &153194277131167813
+--- !u!114 &5470991911375292278
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -53,14 +53,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 6377441560700304152}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f39da6761816e414d83bf51c299ff15d, type: 3}
+  m_Script: {fileID: 11500000, guid: 56ecf873e6347ab4387b4277254ff68e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   trafficLights:
-  - {fileID: 4850859872476621921}
-  - {fileID: 3459549399051700981}
-  - {fileID: 2717540705214636174}
-  - {fileID: 1469955181231827659}
+  - {fileID: 1629277867100459198}
+  - {fileID: 7336123091403355690}
+  - {fileID: 8105151203278330961}
+  - {fileID: 4732078963488642580}
   pedestrainLights:
   - {fileID: 1718438631442270541}
   - {fileID: 5068427919600921433}
@@ -71,8 +71,12 @@ MonoBehaviour:
   - {fileID: 3360075609838206611}
   - {fileID: 166760323818326558}
   - {fileID: 765868231115365038}
-  trafficLightDurationInit: 6
-  rightTurnTime: 2
+  trafficLightTypeInit: 6e0000006f0000006e0000006f000000
+  yellowDurationInit: 1
+  greenDurationInit: 5
+  leftOnlyDurationInit: 2
+  rightTurnTime: 1
+  startingTrafficIndex: 0
 --- !u!1001 &287120528491415732
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -216,15 +220,15 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1394533848274889529, guid: 2aba9052240ec094bab4debf76e52982, type: 3}
   m_PrefabInstance: {fileID: 1390390255196269892}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &4850859872476621921 stripped
+--- !u!114 &1629277867100459198 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5771960818128716069, guid: 2aba9052240ec094bab4debf76e52982, type: 3}
+  m_CorrespondingSourceObject: {fileID: -8802299746274329094, guid: 2aba9052240ec094bab4debf76e52982, type: 3}
   m_PrefabInstance: {fileID: 1390390255196269892}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b0932e79b3380614eac50d5ef2c3db8b, type: 3}
+  m_Script: {fileID: 11500000, guid: 2c800347de97fdb4aaeaf23cb299e5d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &4833515973213857430
@@ -315,6 +319,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4858298029741588763}
     m_Modifications:
+    - target: {fileID: -8802299746274329094, guid: 2aba9052240ec094bab4debf76e52982, type: 3}
+      propertyPath: trafficLightType
+      value: 111
+      objectReference: {fileID: 0}
     - target: {fileID: 1394533848274889529, guid: 2aba9052240ec094bab4debf76e52982, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -369,15 +377,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2aba9052240ec094bab4debf76e52982, type: 3}
---- !u!114 &1469955181231827659 stripped
+--- !u!114 &4732078963488642580 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5771960818128716069, guid: 2aba9052240ec094bab4debf76e52982, type: 3}
+  m_CorrespondingSourceObject: {fileID: -8802299746274329094, guid: 2aba9052240ec094bab4debf76e52982, type: 3}
   m_PrefabInstance: {fileID: 4934902556395072494}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b0932e79b3380614eac50d5ef2c3db8b, type: 3}
+  m_Script: {fileID: 11500000, guid: 2c800347de97fdb4aaeaf23cb299e5d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!4 &6279753596807839959 stripped
@@ -631,6 +639,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4858298029741588763}
     m_Modifications:
+    - target: {fileID: -8802299746274329094, guid: 2aba9052240ec094bab4debf76e52982, type: 3}
+      propertyPath: trafficLightType
+      value: 111
+      objectReference: {fileID: 0}
     - target: {fileID: 1394533848274889529, guid: 2aba9052240ec094bab4debf76e52982, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -685,15 +697,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2aba9052240ec094bab4debf76e52982, type: 3}
---- !u!114 &3459549399051700981 stripped
+--- !u!114 &7336123091403355690 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5771960818128716069, guid: 2aba9052240ec094bab4debf76e52982, type: 3}
+  m_CorrespondingSourceObject: {fileID: -8802299746274329094, guid: 2aba9052240ec094bab4debf76e52982, type: 3}
   m_PrefabInstance: {fileID: 6924519796581960656}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b0932e79b3380614eac50d5ef2c3db8b, type: 3}
+  m_Script: {fileID: 11500000, guid: 2c800347de97fdb4aaeaf23cb299e5d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!4 &8305402097978007785 stripped
@@ -920,22 +932,22 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2aba9052240ec094bab4debf76e52982, type: 3}
---- !u!114 &2717540705214636174 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5771960818128716069, guid: 2aba9052240ec094bab4debf76e52982, type: 3}
-  m_PrefabInstance: {fileID: 8479357909697995179}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b0932e79b3380614eac50d5ef2c3db8b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &7419357347096316562 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1394533848274889529, guid: 2aba9052240ec094bab4debf76e52982, type: 3}
   m_PrefabInstance: {fileID: 8479357909697995179}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &8105151203278330961 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: -8802299746274329094, guid: 2aba9052240ec094bab4debf76e52982, type: 3}
+  m_PrefabInstance: {fileID: 8479357909697995179}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c800347de97fdb4aaeaf23cb299e5d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &8842483946976580688
 PrefabInstance:
   m_ObjectHideFlags: 0

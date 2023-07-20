@@ -2031,22 +2031,22 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2aba9052240ec094bab4debf76e52982, type: 3}
---- !u!4 &1346368446123364243 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1394533848274889529, guid: 2aba9052240ec094bab4debf76e52982, type: 3}
-  m_PrefabInstance: {fileID: 141058350771381418}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &5904003722972603791 stripped
+--- !u!114 &298030146837420368 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5771960818128716069, guid: 2aba9052240ec094bab4debf76e52982, type: 3}
+  m_CorrespondingSourceObject: {fileID: -8802299746274329094, guid: 2aba9052240ec094bab4debf76e52982, type: 3}
   m_PrefabInstance: {fileID: 141058350771381418}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b0932e79b3380614eac50d5ef2c3db8b, type: 3}
+  m_Script: {fileID: 11500000, guid: 2c800347de97fdb4aaeaf23cb299e5d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!4 &1346368446123364243 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1394533848274889529, guid: 2aba9052240ec094bab4debf76e52982, type: 3}
+  m_PrefabInstance: {fileID: 141058350771381418}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1722549840798881844
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2116,6 +2116,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7960444868622259255}
     m_Modifications:
+    - target: {fileID: -8802299746274329094, guid: 2aba9052240ec094bab4debf76e52982, type: 3}
+      propertyPath: childLights.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8802299746274329094, guid: 2aba9052240ec094bab4debf76e52982, type: 3}
+      propertyPath: carChildLights.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8802299746274329094, guid: 2aba9052240ec094bab4debf76e52982, type: 3}
+      propertyPath: childLights.Array.data[0]
+      value: 
+      objectReference: {fileID: 298030146837420368}
+    - target: {fileID: -8802299746274329094, guid: 2aba9052240ec094bab4debf76e52982, type: 3}
+      propertyPath: carChildLights.Array.data[0]
+      value: 
+      objectReference: {fileID: 298030146837420368}
     - target: {fileID: 1394533848274889529, guid: 2aba9052240ec094bab4debf76e52982, type: 3}
       propertyPath: m_RootOrder
       value: 11
@@ -2167,7 +2183,7 @@ PrefabInstance:
     - target: {fileID: 5771960818128716069, guid: 2aba9052240ec094bab4debf76e52982, type: 3}
       propertyPath: childLights.Array.data[0]
       value: 
-      objectReference: {fileID: 5904003722972603791}
+      objectReference: {fileID: 0}
     - target: {fileID: 7727121797556266072, guid: 2aba9052240ec094bab4debf76e52982, type: 3}
       propertyPath: m_Name
       value: UGRP_trafficLight_01

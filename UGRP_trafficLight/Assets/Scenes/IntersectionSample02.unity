@@ -123,6 +123,28 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!114 &396591204 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1608748119125805886, guid: f352f5540130a844c9ce3056223cd4e8, type: 3}
+  m_PrefabInstance: {fileID: 3209045986654904157}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c800347de97fdb4aaeaf23cb299e5d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1446161419 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1608748119412002560, guid: f352f5540130a844c9ce3056223cd4e8, type: 3}
+  m_PrefabInstance: {fileID: 3209045986654904157}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c800347de97fdb4aaeaf23cb299e5d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1470794714
 GameObject:
   m_ObjectHideFlags: 0
@@ -207,6 +229,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 14, y: 0, z: 0}
+--- !u!114 &1638991801 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1608748119875823702, guid: f352f5540130a844c9ce3056223cd4e8, type: 3}
+  m_PrefabInstance: {fileID: 3209045986654904157}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c800347de97fdb4aaeaf23cb299e5d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1669490437
 GameObject:
   m_ObjectHideFlags: 0
@@ -301,6 +334,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!114 &1961274819 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1608748120872311875, guid: f352f5540130a844c9ce3056223cd4e8, type: 3}
+  m_PrefabInstance: {fileID: 3209045986654904157}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c800347de97fdb4aaeaf23cb299e5d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &3209045986654904157
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -308,10 +352,30 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1888583308701321038, guid: f352f5540130a844c9ce3056223cd4e8, type: 3}
+      propertyPath: trafficLightTypeInit.Array.data[1]
+      value: 110
+      objectReference: {fileID: 0}
     - target: {fileID: 1982078244495137369, guid: f352f5540130a844c9ce3056223cd4e8, type: 3}
       propertyPath: m_Name
       value: Intersection02_UGRP
       objectReference: {fileID: 0}
+    - target: {fileID: 3209045987550607962, guid: f352f5540130a844c9ce3056223cd4e8, type: 3}
+      propertyPath: trafficLights.Array.data[0]
+      value: 
+      objectReference: {fileID: 396591204}
+    - target: {fileID: 3209045987550607962, guid: f352f5540130a844c9ce3056223cd4e8, type: 3}
+      propertyPath: trafficLights.Array.data[1]
+      value: 
+      objectReference: {fileID: 1961274819}
+    - target: {fileID: 3209045987550607962, guid: f352f5540130a844c9ce3056223cd4e8, type: 3}
+      propertyPath: trafficLights.Array.data[2]
+      value: 
+      objectReference: {fileID: 1446161419}
+    - target: {fileID: 3209045987550607962, guid: f352f5540130a844c9ce3056223cd4e8, type: 3}
+      propertyPath: trafficLights.Array.data[3]
+      value: 
+      objectReference: {fileID: 1638991801}
     - target: {fileID: 8394404529850792188, guid: f352f5540130a844c9ce3056223cd4e8, type: 3}
       propertyPath: m_RootOrder
       value: 1
