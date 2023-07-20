@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8012729489301626568}
   m_Layer: 0
-  m_Name: crossroad_small_UGRP
+  m_Name: crossroad_small_UGRP_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

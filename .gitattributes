@@ -3,3 +3,5 @@ autogenerate_v2/Assets filter=lfs diff=lfs merge=lfs -text
 *.psd filter=lfs diff=lfs merge=lfs -text
 UGRP_trafficLight/Assets filter=lfs diff=lfs merge=lfs -text
 KartRacing/Assets filter=lfs diff=lfs merge=lfs -text
+autogenerate_v2/Assets filter=lfs diff=lfs merge=lfs -text
+UGRP_trafficLight/Assets filter=lfs diff=lfs merge=lfs -text
