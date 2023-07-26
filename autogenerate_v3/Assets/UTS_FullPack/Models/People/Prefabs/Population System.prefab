@@ -1,0 +1,54 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &177240
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 441950}
+  - component: {fileID: 114303820714878996}
+  m_Layer: 0
+  m_Name: Population System
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &441950
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 177240}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114303820714878996
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 177240}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3933b4d7d567bc449c9853299733c20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  planePrefab: {fileID: 100000, guid: bbd4c4e11e587e74f9b0f48db94be69a, type: 3}
+  circlePrefab: {fileID: 100000, guid: 197257aff3b01cc4b9dd5ba35bcfe8a7, type: 3}
+  standardCrossroad: {fileID: 1241897100684486, guid: 5df3aabd400b37540b8998d4b5cfedf2,
+    type: 3}
+  TCrossroad: {fileID: 1486576019701958, guid: 9ca0443e0070f2e40a9fa0c415700e9b, type: 3}
+  pointPrefab: {fileID: 103948, guid: d5469c7092a5f1845979abba83332838, type: 3}
+  isConcert: 0
+  isStreet: 0
+  mousePos: {x: 0, y: 0, z: 0}

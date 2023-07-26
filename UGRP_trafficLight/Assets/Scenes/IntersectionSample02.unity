@@ -572,7 +572,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1888583308701321038, guid: f352f5540130a844c9ce3056223cd4e8, type: 3}
       propertyPath: trafficLightTypeInit.Array.data[1]
-      value: 110
+      value: 111
       objectReference: {fileID: 0}
     - target: {fileID: 1982078244495137369, guid: f352f5540130a844c9ce3056223cd4e8, type: 3}
       propertyPath: m_Name

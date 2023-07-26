@@ -1,0 +1,160 @@
+fileFormatVersion: 2
+guid: 693e8c2beb6b4784c8a7c43c9a367d33
+timeCreated: 1493211250
+licenseType: Store
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Bicycle_LOD0
+    100004: Bicycle_LOD1
+    100006: Box_collider
+    100008: Pedal_Left
+    100010: Pedal_Left_LOD0
+    100012: Pedal_Left_LOD1
+    100014: Pedal_right
+    100016: Pedal_right_LOD0
+    100018: Pedal_right_LOD1
+    100020: Pedaly
+    100022: Pedaly_LOD0
+    100024: Pedaly_LOD1
+    100026: Wheel_back
+    100028: Wheel_back_collider
+    100030: Wheel_back_LOD0
+    100032: Wheel_back_LOD1
+    100034: Wheel_front
+    100036: Wheel_front_collider
+    100038: Wheel_front_LOD0
+    100040: Wheel_front_LOD1
+    400000: //RootNode
+    400002: Bicycle_LOD0
+    400004: Bicycle_LOD1
+    400006: Box_collider
+    400008: Pedal_Left
+    400010: Pedal_Left_LOD0
+    400012: Pedal_Left_LOD1
+    400014: Pedal_right
+    400016: Pedal_right_LOD0
+    400018: Pedal_right_LOD1
+    400020: Pedaly
+    400022: Pedaly_LOD0
+    400024: Pedaly_LOD1
+    400026: Wheel_back
+    400028: Wheel_back_collider
+    400030: Wheel_back_LOD0
+    400032: Wheel_back_LOD1
+    400034: Wheel_front
+    400036: Wheel_front_collider
+    400038: Wheel_front_LOD0
+    400040: Wheel_front_LOD1
+    2300000: Bicycle_LOD0
+    2300002: Bicycle_LOD1
+    2300004: Pedal_Left_LOD0
+    2300006: Pedal_Left_LOD1
+    2300008: Pedal_right_LOD0
+    2300010: Pedal_right_LOD1
+    2300012: Pedaly_LOD0
+    2300014: Pedaly_LOD1
+    2300016: Wheel_back_LOD0
+    2300018: Wheel_back_LOD1
+    2300020: Wheel_front_LOD0
+    2300022: Wheel_front_LOD1
+    3300000: Bicycle_LOD0
+    3300002: Bicycle_LOD1
+    3300004: Pedal_Left_LOD0
+    3300006: Pedal_Left_LOD1
+    3300008: Pedal_right_LOD0
+    3300010: Pedal_right_LOD1
+    3300012: Pedaly_LOD0
+    3300014: Pedaly_LOD1
+    3300016: Wheel_back_LOD0
+    3300018: Wheel_back_LOD1
+    3300020: Wheel_front_LOD0
+    3300022: Wheel_front_LOD1
+    4300000: Bicycle_LOD0
+    4300002: Bicycle_LOD1
+    4300004: Wheel_front_LOD0
+    4300006: Wheel_front_LOD1
+    4300008: Wheel_back_LOD0
+    4300010: Wheel_back_LOD1
+    4300012: Pedaly_LOD0
+    4300014: Pedal_right_LOD0
+    4300016: Pedal_right_LOD1
+    4300018: Pedal_Left_LOD0
+    4300020: Pedal_Left_LOD1
+    4300022: Pedaly_LOD1
+    7400000: Take 001
+    9500000: //RootNode
+    20500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages:
+    - 0.25
+    - 0.01
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

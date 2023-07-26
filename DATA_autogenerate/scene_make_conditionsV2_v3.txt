@@ -1,0 +1,22 @@
+//0 : ego position
+//1 : car action - 0: 직진, 1 : 우회전, 2: 좌회전, 3: U턴
+//2 : ped1 postion - 0 : 없음, 1 : 보행 중
+//3 : ped2 postion - 0 : 없음, 1 : 보행 중
+//4 : ped signal1 condition- 0 : 없음 1 : 있음
+//5 : ped signal2 condition- 0 : 없음, 1 : 있음
+
+//6 : ped signal 1 light
+ 	0 : red, 1 :  green
+//7 : ped signal 2 light
+ 	0 : red, 1 :  green
+//8 : car signal1 light 
+    	0 : red, 1 : yellow, 2 : green, 3:  red+left 4 : red + yellow (직진 후 좌회전의 경우)
+//9 : car signal2 light ( 어짜피 car signal 1 light에 의해서 결정되는 거 같기도 하다)
+    	0 : red, 1 : yellow, 2 : green, 3:  red+left 4 : red + yellow 
+//10 : right signal light ( 어짜피 car signal 1 light에 의해서 결정되는 거 같기도 하다)
+	0 : red, 1 : yellow, 2 : green
+
+signal random index (110) :
+	0 : green, 1 : yellow, 2 : red + left, 3 : red+yellow
+
+0 1 2 3 4 5 6 7 8 9 10
