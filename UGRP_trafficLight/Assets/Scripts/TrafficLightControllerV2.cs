@@ -35,6 +35,9 @@ public class TrafficLightControllerV2 : MonoBehaviour
     // Random Light State 지원
     public int startingTrafficIndex = 0;
 
+    // Right Light가 보일지 말지를 결정하는 List
+    public bool[] rightLightActive = { true, true, true, true };
+
     // Start is called before the first frame update
     void Start()
     {
@@ -186,6 +189,9 @@ public class TrafficLightControllerV2 : MonoBehaviour
                     
                     // Location init
                     rightlight.trafficLightLocation = temp_index;
+
+                    // isRightlightActive init
+                    rightlight.isRightlightActive = rightLightActive[temp_index];
 
                     if (rightlight.isRightlightActive)
                     {

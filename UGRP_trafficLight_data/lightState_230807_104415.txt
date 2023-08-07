@@ -1,0 +1,36 @@
+trLight type : 110 111 110 111 
+yellowDuration : 1
+greenDuration : 5
+leftOnlyDuration : 1
+starting Index : 0
+Time        Car1        Car2        Car3        Car4        Ped1        Ped2        Ped3        Ped4        Right1      Right2      Right3      Right4      
+0           green       red         green       red         red         red         red         red         red         red         red         red         
+1           green       red         green       red         red         green       red         green       red         red         red         red         
+2.000263    green       red         green       red         red         green       red         green       red         red         red         red         
+3.002085    green       red         green       red         red         red         red         red         right       red         right       red         
+4.002771    green       red         green       red         red         red         red         red         yellow      red         yellow      red         
+5.003544    yellow      red         yellow      red         red         red         red         red         red         red         red         red         
+6.006355    red+left    red         red+left    red         red         red         red         red         red         red         red         red         
+7.00782     red+yellow  red         red+yellow  red         red         red         red         red         red         red         red         red         
+8.009402    red         green       red         green       green       red         green       red         red         red         red         red         
+9.010257    red         green       red         green       green       red         green       red         red         red         red         red         
+10.01073    red         green       red         green       green       red         green       red         red         red         red         red         
+11.01229    red         green       red         green       red         red         red         red         red         right       red         right       
+12.0131     red         green       red         green       red         red         red         red         red         yellow      red         yellow      
+13.01412    red         yellow      red         yellow      red         red         red         red         red         red         red         red         
+14.01603    red         red+left    red         red+left    red         red         red         red         red         red         red         red         
+15.01648    red         red+yellow  red         red+yellow  red         red         red         red         red         red         red         red         
+16.01886    green       red         green       red         red         green       red         green       red         red         red         red         
+17.02108    green       red         green       red         red         green       red         green       red         red         red         red         
+18.02285    green       red         green       red         red         green       red         green       red         red         red         red         
+19.02439    green       red         green       red         red         red         red         red         right       red         right       red         
+20.02545    green       red         green       red         red         red         red         red         yellow      red         yellow      red         
+21.02659    yellow      red         yellow      red         red         red         red         red         red         red         red         red         
+22.02831    red+left    red         red+left    red         red         red         red         red         red         red         red         red         
+23.02889    red+yellow  red         red+yellow  red         red         red         red         red         red         red         red         red         
+24.0298     red         green       red         green       green       red         green       red         red         red         red         red         
+25.03179    red         green       red         green       green       red         green       red         red         red         red         red         
+26.03215    red         green       red         green       green       red         green       red         red         red         red         red         
+27.03262    red         green       red         green       red         red         red         red         red         right       red         right       
+28.03297    red         green       red         green       red         red         red         red         red         yellow      red         yellow      
+29.03384    red         yellow      red         yellow      red         red         red         red         red         red         red         red         

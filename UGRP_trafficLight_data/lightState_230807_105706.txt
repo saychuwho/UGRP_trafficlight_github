@@ -1,0 +1,36 @@
+trLight type : 110 111 110 111 
+yellowDuration : 1
+greenDuration : 5
+leftOnlyDuration : 1
+starting Index : 0
+Time        Car1        Car2        Car3        Car4        Ped1        Ped2        Ped3        Ped4        Right1      Right2      Right3      Right4      
+0           green       red         green       red         red         red         red         red         red         red         red         red         
+1           green       red         green       red         red         green       red         green       red         red         red         red         
+2           green       red         green       red         red         green       red         green       red         red         red         red         
+3           green       red         green       red         red         green       red         green       red         red         red         red         
+4           green       red         green       red         red         red         red         red         right       red         right       red         
+5           yellow      red         yellow      red         red         red         red         red         yellow      red         yellow      red         
+6           red+left    red         red+left    red         red         red         red         red         red         red         red         red         
+7           red+yellow  red         red+yellow  red         red         red         red         red         red         red         red         red         
+8           red         green       red         green       green       red         green       red         red         red         red         red         
+9           red         green       red         green       green       red         green       red         red         red         red         red         
+10          red         green       red         green       green       red         green       red         red         red         red         red         
+11          red         green       red         green       red         red         red         red         red         right       red         right       
+12          red         green       red         green       red         red         red         red         red         yellow      red         yellow      
+13          red         yellow      red         yellow      red         red         red         red         red         red         red         red         
+14          red         red+left    red         red+left    red         red         red         red         red         red         red         red         
+15          red         red+yellow  red         red+yellow  red         red         red         red         red         red         red         red         
+16          green       red         green       red         red         green       red         green       red         red         red         red         
+17          green       red         green       red         red         green       red         green       red         red         red         red         
+18          green       red         green       red         red         green       red         green       red         red         red         red         
+19          green       red         green       red         red         red         red         red         right       red         right       red         
+20          green       red         green       red         red         red         red         red         yellow      red         yellow      red         
+21          yellow      red         yellow      red         red         red         red         red         red         red         red         red         
+22          red+left    red         red+left    red         red         red         red         red         red         red         red         red         
+23          red+yellow  red         red+yellow  red         red         red         red         red         red         red         red         red         
+24          red         green       red         green       green       red         green       red         red         red         red         red         
+25          red         green       red         green       green       red         green       red         red         red         red         red         
+26          red         green       red         green       green       red         green       red         red         red         red         red         
+27          red         green       red         green       red         red         red         red         red         right       red         right       
+28          red         green       red         green       red         red         red         red         red         yellow      red         yellow      
+29          red         yellow      red         yellow      red         red         red         red         red         red         red         red         

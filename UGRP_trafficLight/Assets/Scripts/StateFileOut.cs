@@ -19,6 +19,11 @@ public class StateFileOut : MonoBehaviour
     FileStream fs;
     StreamWriter sw;
 
+    FileStream fs2;
+    StreamWriter swCSV;
+
+    int padnum = 20;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -28,10 +33,15 @@ public class StateFileOut : MonoBehaviour
         rightTurnlights = InterManager.rightTurnLights;
 
         string filename = savefileDir + "lightState_" + DateTime.Now.ToString("yyMMdd_HHmmss") + ".txt";
+        string filename2 = savefileDir + "lightState_" + DateTime.Now.ToString("yyMMdd_HHmmss") + ".csv";
         fs = new FileStream(filename, FileMode.Create);
         sw = new StreamWriter(fs);
 
-        // write basic infos first
+        // add csv FileStream
+        fs2 = new FileStream(filename2, FileMode.Create);
+        swCSV = new StreamWriter(fs2);
+
+        // write basic infos first >> csv don't need this. read the extra infos from txt
         sw.Write("trLight type : ");
         foreach(int type in InterManager.trafficLightTypeInit)
         {
@@ -44,23 +54,28 @@ public class StateFileOut : MonoBehaviour
         sw.Write("starting Index : " + InterManager.startingTrafficIndex + "\n");
 
         // write rows
-        sw.Write("Time".PadRight(12, ' '));
+        sw.Write("Time".PadRight(padnum, ' '));
+        swCSV.Write("Time,");
         for(int i = 1; i <= 4; i++)
         {
             string tmpString = "Car" + i;
-            sw.Write(tmpString.PadRight(12, ' '));
+            sw.Write(tmpString.PadRight(padnum, ' '));
+            swCSV.Write(tmpString + ",");
         }
         for(int i = 1; i <= 4; i++)
         {
             string tmpString = "Ped" + i;
-            sw.Write(tmpString.PadRight(12, ' '));
+            sw.Write(tmpString.PadRight(padnum, ' '));
+            swCSV.Write(tmpString + ",");
         }
         for(int i = 1; i <= 4; i++)
         {
             string tmpString = "Right" + i;
-            sw.Write(tmpString.PadRight(12, ' '));
+            sw.Write(tmpString.PadRight(padnum, ' '));
+            swCSV.Write(tmpString + ",");
         }
         sw.Write("\n");
+        swCSV.Write("\n");
 
         // time tracker
         timeTracker = Time.time;
@@ -71,31 +86,84 @@ public class StateFileOut : MonoBehaviour
     {
         if(timeTracker <= Time.time && recordTime > Time.time)
         {
-            sw.Write(timeTracker.ToString().PadRight(12, ' '));
-            foreach(car_light_UGRP light in carlights)
+            int tmptimeTracker = (int)timeTracker;
+            int tmpIndexTracker = 0;
+            List<bool> tmpRightExist = new List<bool>();
+            foreach(rightTurn_light_UGRP light in rightTurnlights)
             {
-                sw.Write(LightReader(light.ReturnCurrentLight(), light.trafficLightType));
+                if (light.isRightlightActive)
+                    tmpRightExist.Add(true);
+                else
+                    tmpRightExist.Add(false);
             }
+
+            sw.Write(tmptimeTracker.ToString().PadRight(padnum, ' '));
+            swCSV.Write(tmptimeTracker.ToString() + ",");
+            
+
+            foreach (car_light_UGRP light in carlights)
+            {
+                if (tmpRightExist[tmpIndexTracker])
+                {
+                    sw.Write(LightReader(light.ReturnCurrentLight(), light.trafficLightType));
+                    swCSV.Write(LightReader(light.ReturnCurrentLight(), light.trafficLightType, true) + ",");
+                }
+                else
+                {
+                    sw.Write(LightReader(light.ReturnCurrentLight(), light.trafficLightType, false, false));
+                    swCSV.Write(LightReader(light.ReturnCurrentLight(), light.trafficLightType, true, false) + ",");
+                }
+                tmpIndexTracker++;
+            }
+
             foreach(ped_light_UGRP light in pedlights)
             {
                 sw.Write(LightReader(light.ReturnCurrentLight(), light.trafficLightType));
+                swCSV.Write(LightReader(light.ReturnCurrentLight(), light.trafficLightType, true) + ",");
             }
+
+            tmpIndexTracker = 0;
             foreach(rightTurn_light_UGRP light in rightTurnlights)
             {
-                sw.Write(LightReader(light.ReturnCurrentLight(), light.trafficLightType));
+                if (tmpRightExist[tmpIndexTracker])
+                {
+                    sw.Write(LightReader(light.ReturnCurrentLight(), light.trafficLightType));
+                    swCSV.Write(LightReader(light.ReturnCurrentLight(), light.trafficLightType, true) + ",");
+                }
+                else
+                {
+                    sw.Write(LightReader(light.ReturnCurrentLight(), light.trafficLightType, false, false));
+                    swCSV.Write(LightReader(light.ReturnCurrentLight(), light.trafficLightType, true, false) + ",");
+                }
+                tmpIndexTracker++;
             }
             sw.Write("\n");
+            swCSV.Write("\n");
             timeTracker = Time.time + 1;
         }
         if(recordTime <= Time.time)
         {
             Debug.Log("done writing");
             sw.Close();
+            swCSV.Close();
         }
     }
 
-    public string LightReader(List<int> lightstate, int trafficLightType)
-    {
+    /// <summary>
+    /// read the lightstate list and return string lightstate
+    /// index of the direction is like this :
+    ///     - Straight : (S)
+    ///     - Right turn : (R)
+    ///     - Left turn : (L)
+    ///     - All light : (A)
+    /// </summary>
+    /// <param name="lightstate"> lightstate of the trafficlight</param>
+    /// <param name="trafficLightType"> lightType of UGRP_traffic_light </param>
+    /// <param name="isCSV"> Writing FileStream is csv or not. default is false </param>
+    /// <param name="isRight"> RightLight is available. default is true </param>
+    /// <returns></returns>
+    public string LightReader(List<int> lightstate, int trafficLightType, bool isCSV = false, bool isRight = true)
+    {   
         string retString = "";
         // car light
         if (trafficLightType / 100 == 1 || trafficLightType / 100 == 2)
@@ -104,24 +172,32 @@ public class StateFileOut : MonoBehaviour
             {
                 if (lightstate[1] != 0)
                 {
-                    retString = "red+yellow";
+                    retString = "red(SR)+yellow(L)";
                 }
                 else if (lightstate[2] != 0)
                 {
-                    retString = "red+left";
+                    retString = "red(SR)+left(L)";
                 }
                 else
                 {
-                    retString = "red";
+                    retString = "red(A)";
                 }
             }
             else if (lightstate[1] != 0)
             {
-                retString = "yellow";
+                retString = "yellow(A)";
             }
             else
             {
-                retString = "green";
+                if (!isRight) 
+                { 
+                    retString = "green(SR)"; 
+                }
+                else
+                {
+                    retString = "green(S)";
+                }
+                
             }
         }
         // ped light
@@ -139,21 +215,26 @@ public class StateFileOut : MonoBehaviour
         // rightturn light
         else
         {
-            if(lightstate[0] != 0)
+            if (isRight)
             {
-                retString = "red";
-            }
-            else if(lightstate[1] != 0)
-            {
-                retString = "yellow";
+                if (lightstate[0] != 0)
+                {
+                    retString = "red(R)";
+                }
+                else if (lightstate[1] != 0)
+                {
+                    retString = "yellow(R)";
+                }
+                else
+                {
+                    retString = "right(R)";
+                }
             }
             else
-            {
-                retString = "right";
-            }
+                retString = "None";
         }
 
 
-        return retString.PadRight(12, ' ');
+        return isCSV ? retString : retString.PadRight(padnum, ' ');
     }
 }

@@ -221,7 +221,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   InterManager: {fileID: 3209045986654904158}
-  savefileDir: C:\Users\hass-admin\
+  savefileDir: C:\Users\hass-admin\Documents\UGRP_trafficlight_github\UGRP_trafficLight_data\
   recordTime: 30
 --- !u!4 &1265114565
 Transform:
@@ -570,6 +570,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1888583308701321038, guid: f352f5540130a844c9ce3056223cd4e8, type: 3}
+      propertyPath: rightLightActive.Array.data[0]
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1888583308701321038, guid: f352f5540130a844c9ce3056223cd4e8, type: 3}
+      propertyPath: rightLightActive.Array.data[1]
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1888583308701321038, guid: f352f5540130a844c9ce3056223cd4e8, type: 3}
+      propertyPath: rightLightActive.Array.data[2]
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1888583308701321038, guid: f352f5540130a844c9ce3056223cd4e8, type: 3}
+      propertyPath: rightLightActive.Array.data[3]
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1888583308701321038, guid: f352f5540130a844c9ce3056223cd4e8, type: 3}
       propertyPath: trafficLightTypeInit.Array.data[1]
       value: 111
