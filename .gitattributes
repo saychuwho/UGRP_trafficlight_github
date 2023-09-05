@@ -9,3 +9,4 @@ autogenerate_v3/Assets filter=lfs diff=lfs merge=lfs -text
 *.png filter=lfs diff=lfs merge=lfs -text
 *.PNG filter=lfs diff=lfs merge=lfs -text
 *.hdr filter=lfs diff=lfs merge=lfs -text
+UGRP_trafficLight/Assets/Delux[[:space:]]Primitives/ filter=lfs diff=lfs merge=lfs -text
