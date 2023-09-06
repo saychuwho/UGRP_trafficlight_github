@@ -212,6 +212,7 @@ public class TrafficLightControllerV2 : MonoBehaviour
                     else
                     {
                         rightlight.bodystructure.SetActive(false);
+                        rightlight.trafficSign.SetActive(false);
                         for (int i = 0; i < rightlight.lights.Length; i++)
                         {
                             rightlight.LightOff(i);

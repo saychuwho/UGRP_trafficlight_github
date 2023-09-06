@@ -17,4 +17,7 @@ public class rightTurn_light_UGRP : traffic_light_UGRP
 
     // right turn light는 없어질수도 있으므로, 등 이외에도 하위 구조에 대한 정보도 가지고 있어야 한다.
     public GameObject bodystructure;
+
+    // traffic sign
+    public GameObject trafficSign;
 }

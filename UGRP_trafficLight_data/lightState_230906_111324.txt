@@ -1,0 +1,9 @@
+trLight type : 110 111 110 111 
+yellowDuration : 1
+greenDuration : 5
+leftOnlyDuration : 1
+starting Index : 0
+Time                Car1                Car2                Car3                Car4                Ped1                Ped2                Ped3                Ped4                Right1              Right2              Right3              Right4              
+0                   green(S)            red(A)              green(S)            red(A)              red                 red                 red                 red                 red(R)              red(R)              red(R)              red(R)              
+1                   green(S)            red(A)              green(S)            red(A)              red                 green               red                 green               red(R)              red(R)              red(R)              red(R)              
+2                   green(S)            red(A)              green(S)            red(A)              red                 green       
