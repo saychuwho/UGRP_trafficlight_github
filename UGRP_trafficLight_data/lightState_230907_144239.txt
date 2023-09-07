@@ -1,0 +1,13 @@
+trLight type : 110 111 110 111 
+yellowDuration : 1
+greenDuration : 5
+leftOnlyDuration : 1
+starting Index : 0
+Time                Car1                Car2                Car3                Car4                Ped1                Ped2                Ped3                Ped4                Right1              Right2              Right3              Right4              
+0                   green(SR)           red(A)              green(SR)           red(A)              red                 red                 red                 red                 None                None                None                None                
+1                   green(SR)           red(A)              green(SR)           red(A)              red                 green               red                 green               None                None                None                None                
+2                   green(SR)           red(A)              green(SR)           red(A)              red                 green               red                 green               None                None                None                None                
+3                   green(SR)           red(A)              green(SR)           red(A)              red                 red                 red                 red                 None                None                None                None                
+4                   green(SR)           red(A)              green(SR)           red(A)              red                 red                 red                 red                 None                None                None                None                
+5                   yellow(A)           red(A)              yellow(A)           red(A)              red                 red                 red                 red                 None                None                None                None                
+6                   red(SR)+left(L)     red(A)              red(SR)+left(L)     red(A)              red         

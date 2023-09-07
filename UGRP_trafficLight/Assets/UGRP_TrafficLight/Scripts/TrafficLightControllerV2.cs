@@ -51,6 +51,12 @@ public class TrafficLightControllerV2 : MonoBehaviour
             // trafficlight type init
             trafficlight.trafficLightType = trafficLightTypeInit[temp_index];
 
+            // straight_left_together sign init
+            if(trafficlight.trafficLightType / 100 != 2)
+            {
+                trafficlight.trafficSign.SetActive(false);
+            }
+
             // lightState init
             LightStatesGeneratorV2 temp_light = new LightStatesGeneratorV2(trafficlight.trafficLightType);
             // Debug.Log(trafficlight.trafficLightType);
@@ -62,11 +68,16 @@ public class TrafficLightControllerV2 : MonoBehaviour
             // child light init
             if(trafficlight.carChildLights.Length > 0)
             {
-                foreach(traffic_light_UGRP childlight in trafficlight.carChildLights)
+                foreach(car_light_UGRP childlight in trafficlight.carChildLights)
                 {
                     childlight.ResetLight();
                     childlight.lightStates = temp_light.lightStates;
                     childlight.trafficLightLocation = 10 + temp_index;
+                    // straight_left_together sign init
+                    if (childlight.trafficSign != null && trafficlight.trafficLightType / 100 != 2)
+                    {
+                        childlight.trafficSign.SetActive(false);
+                    }
                 }
             }
 

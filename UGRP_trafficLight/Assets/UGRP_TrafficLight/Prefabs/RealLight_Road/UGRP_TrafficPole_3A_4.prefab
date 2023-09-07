@@ -1571,6 +1571,7 @@ Transform:
   - {fileID: 1346368446123364243}
   - {fileID: 5769004500870754680}
   - {fileID: 4250898548204408885}
+  - {fileID: 2205040427057966098}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2121,6 +2122,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -8802299746274329094, guid: 2aba9052240ec094bab4debf76e52982, type: 3}
+      propertyPath: straight_left_together
+      value: 
+      objectReference: {fileID: 3809450453045676227}
+    - target: {fileID: -8802299746274329094, guid: 2aba9052240ec094bab4debf76e52982, type: 3}
       propertyPath: carChildLights.Array.size
       value: 1
       objectReference: {fileID: 0}
@@ -2194,6 +2199,73 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 1394533848274889529, guid: 2aba9052240ec094bab4debf76e52982, type: 3}
   m_PrefabInstance: {fileID: 2668476975313214912}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &8887762871430679593
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 7960444868622259255}
+    m_Modifications:
+    - target: {fileID: 5731479499895538922, guid: cc0422828e5a96d47afb003a8bb5eb85, type: 3}
+      propertyPath: m_Name
+      value: straight_left_together
+      objectReference: {fileID: 0}
+    - target: {fileID: 7335886227345924155, guid: cc0422828e5a96d47afb003a8bb5eb85, type: 3}
+      propertyPath: m_RootOrder
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 7335886227345924155, guid: cc0422828e5a96d47afb003a8bb5eb85, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -7.18
+      objectReference: {fileID: 0}
+    - target: {fileID: 7335886227345924155, guid: cc0422828e5a96d47afb003a8bb5eb85, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 7.036
+      objectReference: {fileID: 0}
+    - target: {fileID: 7335886227345924155, guid: cc0422828e5a96d47afb003a8bb5eb85, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7335886227345924155, guid: cc0422828e5a96d47afb003a8bb5eb85, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7335886227345924155, guid: cc0422828e5a96d47afb003a8bb5eb85, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7335886227345924155, guid: cc0422828e5a96d47afb003a8bb5eb85, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7335886227345924155, guid: cc0422828e5a96d47afb003a8bb5eb85, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7335886227345924155, guid: cc0422828e5a96d47afb003a8bb5eb85, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7335886227345924155, guid: cc0422828e5a96d47afb003a8bb5eb85, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7335886227345924155, guid: cc0422828e5a96d47afb003a8bb5eb85, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 180
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: cc0422828e5a96d47afb003a8bb5eb85, type: 3}
+--- !u!4 &2205040427057966098 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7335886227345924155, guid: cc0422828e5a96d47afb003a8bb5eb85, type: 3}
+  m_PrefabInstance: {fileID: 8887762871430679593}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &3809450453045676227 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5731479499895538922, guid: cc0422828e5a96d47afb003a8bb5eb85, type: 3}
+  m_PrefabInstance: {fileID: 8887762871430679593}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &9013426090060577145
 PrefabInstance:
