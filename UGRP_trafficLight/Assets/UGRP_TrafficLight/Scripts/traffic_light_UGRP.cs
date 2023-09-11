@@ -8,7 +8,7 @@ public class traffic_light_UGRP : MonoBehaviour
     public int trafficLightType = 0;
 
     // 현재 신호등이 어떤 위치에 있는지를 나타내는 변수
-    public int trafficLightLocation = 0;
+    [HideInInspector] public int trafficLightLocation = 0;
 
     // code idea's from "Animating Traffic lights / Street Lamps / Signs" by Kobra Game Studios
     // 여기에는 반드시 신호등 불 순서대로 집어넣어야 한다.
@@ -16,26 +16,26 @@ public class traffic_light_UGRP : MonoBehaviour
 
     // 기존 코드에서 시간 관련된 거를 뺐다.
     // 어떤 불이 들어와야 하는지가 아니라, 신호 체계에서 어떤 상태를 가지고 있어야 하는지를 나타내는 index이다.
-    public int startingLightIndex = 0;
+    [HideInInspector] public int startingLightIndex = 0;
 
     // 현재 켜져있는 불이 여러개가 있을 수 있으니 이를 List로 관리
     List<int> m_iCurrentLightIndex = new List<int>();
 
     // 어떤 불이 어떤 순서대로 들어와야 하는지를 지정하는 List
     // 이거는 controller의 Start에서 지정해야 할지도...
-    public List<int[]> lightStates = new List<int[]>();
+    [HideInInspector] public List<int[]> lightStates = new List<int[]>();
 
     // 상태들이 어떤 길이 만큼 불이 들어올지를 결정
-    public List<float> lightDuration = new List<float>();
+    [HideInInspector] public List<float> lightDuration = new List<float>();
 
     // 현재 어떤 상태로 불이 들어와야 하는지를 나타내는 변수
-    public int currentLightStateIndex = 0;
+    [HideInInspector] public int currentLightStateIndex = 0;
 
     // 현재 상태가 얼마나 지속되어야 하는가를 나타내는 변수
-    public float currentLightStateDuration;
+    [HideInInspector] public float currentLightStateDuration;
 
     // 황색등이 들어오는 lightState가 얼마나 있는지를 나타내는 변수
-    public int yellowNum = 0;
+    [HideInInspector] public int yellowNum = 0;
 
     // child light : 자신의 행동과 동일한 행동을 하는 light를 표현
     // public traffic_light_UGRP[] childLights;

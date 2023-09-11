@@ -52,15 +52,15 @@ public class TrafficLightControllerV2 : MonoBehaviour
             trafficlight.trafficLightType = trafficLightTypeInit[temp_index];
 
             // straight_left_together sign init
-            if(trafficlight.trafficLightType / 100 != 2)
+            if(trafficlight.trafficLightType / 100 != 2 && trafficlight.trafficLightType / 100 != 5)
             {
                 trafficlight.trafficSign.SetActive(false);
             }
 
             // lightState init
             LightStatesGeneratorV2 temp_light = new LightStatesGeneratorV2(trafficlight.trafficLightType);
-            // Debug.Log(trafficlight.trafficLightType);
             trafficlight.lightStates = temp_light.lightStates;
+            
             
             // Location init
             trafficlight.trafficLightLocation = temp_index;
@@ -74,7 +74,7 @@ public class TrafficLightControllerV2 : MonoBehaviour
                     childlight.lightStates = temp_light.lightStates;
                     childlight.trafficLightLocation = 10 + temp_index;
                     // straight_left_together sign init
-                    if (childlight.trafficSign != null && trafficlight.trafficLightType / 100 != 2)
+                    if (childlight.trafficSign != null && trafficlight.trafficLightType / 100 != 2 && trafficlight.trafficLightType / 100 != 5)
                     {
                         childlight.trafficSign.SetActive(false);
                     }
@@ -84,22 +84,40 @@ public class TrafficLightControllerV2 : MonoBehaviour
             // trafficlight duration init
             // V2의 경우에는 lightstate가 다른 신호의 상황도 고려하고 있으므로,
             // 굳이 직좌 동시이거나 양방향 신호 구분하지 않고 모두 동일한 기준으로 duration을 설정하면 된다.
-            for(int i=0;i<trafficlight.lightStates.Count; i++)
+            if (trafficlight.trafficLightType / 100 != 5)
             {
-                // yellow light
-                if(trafficlight.lightStates[i][1] != 0 || trafficlight.lightStates[i][0] == 2)
+                for (int i = 0; i < trafficlight.lightStates.Count; i++)
                 {
-                    trafficlight.lightDuration.Add(yellowDurationInit);
+                    // yellow light
+                    if (trafficlight.lightStates[i][1] != 0 || trafficlight.lightStates[i][0] == 2)
+                    {
+                        trafficlight.lightDuration.Add(yellowDurationInit);
+                    }
+                    // left light only
+                    else if ((trafficlight.lightStates[i][2] != 0 && trafficlight.lightStates[i][3] != 1)
+                        || trafficlight.lightStates[i][0] == 3)
+                    {
+                        trafficlight.lightDuration.Add(leftOnlyDurationInit);
+                    }
+                    else
+                    {
+                        trafficlight.lightDuration.Add(greenDurationInit);
+                    }
                 }
-                // left light only
-                else if((trafficlight.lightStates[i][2] != 0 && trafficlight.lightStates[i][3] != 1)
-                    ||trafficlight.lightStates[i][0] == 3)
+            }
+            else if(trafficlight.trafficLightType / 100 == 5)
+            {
+                for (int i=0;i<trafficlight.lightStates.Count; i++)
                 {
-                    trafficlight.lightDuration.Add(leftOnlyDurationInit);
-                }
-                else
-                {
-                    trafficlight.lightDuration.Add(greenDurationInit);
+                    // yellow light
+                    if (trafficlight.lightStates[i][1] != 0 || trafficlight.lightStates[i][0] == 2)
+                    {
+                        trafficlight.lightDuration.Add(yellowDurationInit);
+                    }
+                    else
+                    {
+                        trafficlight.lightDuration.Add(greenDurationInit);
+                    }
                 }
             }
 

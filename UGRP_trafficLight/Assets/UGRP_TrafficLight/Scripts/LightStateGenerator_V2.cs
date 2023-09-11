@@ -217,26 +217,38 @@ public class LightStatesGeneratorV2
 
             case 510: // 비보호 좌회전 : 모든 신호가 동시에 안멈춤
                 lightStates.Add(new int[] { 1, 0, 0 });
+                lightStates.Add(new int[] { 2, 0, 0 });
+
                 lightStates.Add(new int[] { 0, 0, 1 });
                 lightStates.Add(new int[] { 0, 1, 0 });
                 break;
+
             case 511: // 비보호 좌회전 : 모든 신호가 동시에 안멈춤
                 lightStates.Add(new int[] { 0, 0, 1 });
                 lightStates.Add(new int[] { 0, 1, 0 });
+                
                 lightStates.Add(new int[] { 1, 0, 0 });
+                lightStates.Add(new int[] { 2, 0, 0 });
                 break;
 
             case 520: // 비보호 좌회전 : 모든 신호가 동시에 멈춤
                 lightStates.Add(new int[] { 1, 0, 0 });
+
                 lightStates.Add(new int[] { 1, 0, 0 });
+                lightStates.Add(new int[] { 2, 0, 0 });
+
                 lightStates.Add(new int[] { 0, 0, 1 });
                 lightStates.Add(new int[] { 0, 1, 0 });
                 break;
+
             case 521:
                 lightStates.Add(new int[] { 1, 0, 0 });
+
                 lightStates.Add(new int[] { 0, 0, 1 });
                 lightStates.Add(new int[] { 0, 1, 0 });
+
                 lightStates.Add(new int[] { 1, 0, 0 });
+                lightStates.Add(new int[] { 2, 0, 0 });
                 break;
         }
     }

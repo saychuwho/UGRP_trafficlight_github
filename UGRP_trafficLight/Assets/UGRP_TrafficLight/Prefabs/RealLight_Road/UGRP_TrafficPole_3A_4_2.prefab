@@ -1876,6 +1876,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 8393919671262390909}
     m_Modifications:
     - target: {fileID: -8802299746274329094, guid: 2aba9052240ec094bab4debf76e52982, type: 3}
+      propertyPath: trafficSign
+      value: 
+      objectReference: {fileID: 923475707273346119}
+    - target: {fileID: -8802299746274329094, guid: 2aba9052240ec094bab4debf76e52982, type: 3}
       propertyPath: straight_left_together
       value: 
       objectReference: {fileID: 923475707273346119}

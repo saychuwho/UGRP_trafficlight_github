@@ -380,7 +380,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c800347de97fdb4aaeaf23cb299e5d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trafficLightType: 0
+  trafficLightType: 510
   trafficLightLocation: 0
   lights:
   - {fileID: 1179544770795541108}
@@ -391,4 +391,5 @@ MonoBehaviour:
   currentLightStateIndex: 0
   currentLightStateDuration: 0
   yellowNum: 0
-  childLights: []
+  carChildLights: []
+  trafficSign: {fileID: 0}

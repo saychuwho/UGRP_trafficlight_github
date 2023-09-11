@@ -10,6 +10,8 @@ public class StateFileOut : MonoBehaviour
     public string savefileDir;
     public float recordTime;
 
+    public bool isRecord;
+
     car_light_UGRP[] carlights;
     ped_light_UGRP[] pedlights;
     rightTurn_light_UGRP[] rightTurnlights;
@@ -84,68 +86,71 @@ public class StateFileOut : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(timeTracker <= Time.time && recordTime > Time.time)
+        if (isRecord)
         {
-            int tmptimeTracker = (int)timeTracker;
-            int tmpIndexTracker = 0;
-            List<bool> tmpRightExist = new List<bool>();
-            foreach(rightTurn_light_UGRP light in rightTurnlights)
+            if (timeTracker <= Time.time && recordTime > Time.time)
             {
-                if (light.isRightlightActive)
-                    tmpRightExist.Add(true);
-                else
-                    tmpRightExist.Add(false);
-            }
+                int tmptimeTracker = (int)timeTracker;
+                int tmpIndexTracker = 0;
+                List<bool> tmpRightExist = new List<bool>();
+                foreach (rightTurn_light_UGRP light in rightTurnlights)
+                {
+                    if (light.isRightlightActive)
+                        tmpRightExist.Add(true);
+                    else
+                        tmpRightExist.Add(false);
+                }
 
-            sw.Write(tmptimeTracker.ToString().PadRight(padnum, ' '));
-            swCSV.Write(tmptimeTracker.ToString() + ",");
-            
+                sw.Write(tmptimeTracker.ToString().PadRight(padnum, ' '));
+                swCSV.Write(tmptimeTracker.ToString() + ",");
 
-            foreach (car_light_UGRP light in carlights)
-            {
-                if (tmpRightExist[tmpIndexTracker])
+
+                foreach (car_light_UGRP light in carlights)
+                {
+                    if (tmpRightExist[tmpIndexTracker])
+                    {
+                        sw.Write(LightReader(light.ReturnCurrentLight(), light.trafficLightType));
+                        swCSV.Write(LightReader(light.ReturnCurrentLight(), light.trafficLightType, true) + ",");
+                    }
+                    else
+                    {
+                        sw.Write(LightReader(light.ReturnCurrentLight(), light.trafficLightType, false, false));
+                        swCSV.Write(LightReader(light.ReturnCurrentLight(), light.trafficLightType, true, false) + ",");
+                    }
+                    tmpIndexTracker++;
+                }
+
+                foreach (ped_light_UGRP light in pedlights)
                 {
                     sw.Write(LightReader(light.ReturnCurrentLight(), light.trafficLightType));
                     swCSV.Write(LightReader(light.ReturnCurrentLight(), light.trafficLightType, true) + ",");
                 }
-                else
-                {
-                    sw.Write(LightReader(light.ReturnCurrentLight(), light.trafficLightType, false, false));
-                    swCSV.Write(LightReader(light.ReturnCurrentLight(), light.trafficLightType, true, false) + ",");
-                }
-                tmpIndexTracker++;
-            }
 
-            foreach(ped_light_UGRP light in pedlights)
-            {
-                sw.Write(LightReader(light.ReturnCurrentLight(), light.trafficLightType));
-                swCSV.Write(LightReader(light.ReturnCurrentLight(), light.trafficLightType, true) + ",");
-            }
-
-            tmpIndexTracker = 0;
-            foreach(rightTurn_light_UGRP light in rightTurnlights)
-            {
-                if (tmpRightExist[tmpIndexTracker])
+                tmpIndexTracker = 0;
+                foreach (rightTurn_light_UGRP light in rightTurnlights)
                 {
-                    sw.Write(LightReader(light.ReturnCurrentLight(), light.trafficLightType));
-                    swCSV.Write(LightReader(light.ReturnCurrentLight(), light.trafficLightType, true) + ",");
+                    if (tmpRightExist[tmpIndexTracker])
+                    {
+                        sw.Write(LightReader(light.ReturnCurrentLight(), light.trafficLightType));
+                        swCSV.Write(LightReader(light.ReturnCurrentLight(), light.trafficLightType, true) + ",");
+                    }
+                    else
+                    {
+                        sw.Write(LightReader(light.ReturnCurrentLight(), light.trafficLightType, false, false));
+                        swCSV.Write(LightReader(light.ReturnCurrentLight(), light.trafficLightType, true, false) + ",");
+                    }
+                    tmpIndexTracker++;
                 }
-                else
-                {
-                    sw.Write(LightReader(light.ReturnCurrentLight(), light.trafficLightType, false, false));
-                    swCSV.Write(LightReader(light.ReturnCurrentLight(), light.trafficLightType, true, false) + ",");
-                }
-                tmpIndexTracker++;
+                sw.Write("\n");
+                swCSV.Write("\n");
+                timeTracker = Time.time + 1;
             }
-            sw.Write("\n");
-            swCSV.Write("\n");
-            timeTracker = Time.time + 1;
-        }
-        if(recordTime <= Time.time)
-        {
-            Debug.Log("done writing");
-            sw.Close();
-            swCSV.Close();
+            if (recordTime <= Time.time)
+            {
+                Debug.Log("done writing");
+                sw.Close();
+                swCSV.Close();
+            }
         }
     }
 
