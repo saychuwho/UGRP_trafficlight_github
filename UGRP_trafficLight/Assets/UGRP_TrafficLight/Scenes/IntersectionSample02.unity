@@ -384,7 +384,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1470794714}
   m_LocalRotation: {x: 0.12186928, y: 0, z: 0, w: 0.9925462}
-  m_LocalPosition: {x: 280.6, y: 8.919317, z: -38.875076}
+  m_LocalPosition: {x: 2, y: 8.919317, z: -38.875076}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -704,6 +704,22 @@ PrefabInstance:
     - target: {fileID: 1888583308701321038, guid: f352f5540130a844c9ce3056223cd4e8, type: 3}
       propertyPath: trafficLightTypeInit.Array.data[1]
       value: 111
+      objectReference: {fileID: 0}
+    - target: {fileID: 1888583308701321038, guid: f352f5540130a844c9ce3056223cd4e8, type: 3}
+      propertyPath: rightTurnProhibitActive.Array.data[0]
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1888583308701321038, guid: f352f5540130a844c9ce3056223cd4e8, type: 3}
+      propertyPath: rightTurnProhibitActive.Array.data[1]
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1888583308701321038, guid: f352f5540130a844c9ce3056223cd4e8, type: 3}
+      propertyPath: rightTurnProhibitActive.Array.data[2]
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1888583308701321038, guid: f352f5540130a844c9ce3056223cd4e8, type: 3}
+      propertyPath: rightTurnProhibitActive.Array.data[3]
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1982078244495137369, guid: f352f5540130a844c9ce3056223cd4e8, type: 3}
       propertyPath: m_Name

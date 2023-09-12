@@ -36,10 +36,22 @@ public class TrafficLightControllerV2 : MonoBehaviour
     public int startingTrafficIndex = 0;
 
     // Right Light가 보일지 말지를 결정하는 List
-    public bool[] rightLightActive = { true, true, true, true };
+    [SerializeField] public bool[] rightLightActive = { true, true, true, true };
+
+    // Right Turn Prohibit Sign이 보일지 말지를 결정하는 List
+    [SerializeField] public bool[] rightTurnProhibitActive = { true, true, true, true };
 
     // Start is called before the first frame update
     void Start()
+    {
+        CarLightInit();
+        PedRightLightInit();
+    }
+
+    /// <summary>
+    /// Initialize car_light_UGRP
+    /// </summary>
+    void CarLightInit()
     {
         // trafficlight의 상태를 init
         int temp_index = 0;
@@ -52,7 +64,7 @@ public class TrafficLightControllerV2 : MonoBehaviour
             trafficlight.trafficLightType = trafficLightTypeInit[temp_index];
 
             // straight_left_together sign init
-            if(trafficlight.trafficLightType / 100 != 2 && trafficlight.trafficLightType / 100 != 5)
+            if (trafficlight.trafficLightType / 100 != 2 && trafficlight.trafficLightType / 100 != 5)
             {
                 trafficlight.trafficSign.SetActive(false);
             }
@@ -60,15 +72,15 @@ public class TrafficLightControllerV2 : MonoBehaviour
             // lightState init
             LightStatesGeneratorV2 temp_light = new LightStatesGeneratorV2(trafficlight.trafficLightType);
             trafficlight.lightStates = temp_light.lightStates;
-            
-            
+
+
             // Location init
             trafficlight.trafficLightLocation = temp_index;
 
             // child light init
-            if(trafficlight.carChildLights.Length > 0)
+            if (trafficlight.carChildLights.Length > 0)
             {
-                foreach(car_light_UGRP childlight in trafficlight.carChildLights)
+                foreach (car_light_UGRP childlight in trafficlight.carChildLights)
                 {
                     childlight.ResetLight();
                     childlight.lightStates = temp_light.lightStates;
@@ -105,9 +117,10 @@ public class TrafficLightControllerV2 : MonoBehaviour
                     }
                 }
             }
-            else if(trafficlight.trafficLightType / 100 == 5)
+            // 비보호 좌회전인 경우 Duration Update
+            else if (trafficlight.trafficLightType / 100 == 5)
             {
-                for (int i=0;i<trafficlight.lightStates.Count; i++)
+                for (int i = 0; i < trafficlight.lightStates.Count; i++)
                 {
                     // yellow light
                     if (trafficlight.lightStates[i][1] != 0 || trafficlight.lightStates[i][0] == 2)
@@ -126,7 +139,7 @@ public class TrafficLightControllerV2 : MonoBehaviour
 
             // trafficlight current light init
             trafficlight.currentLightStateDuration = Time.time + trafficlight.lightDuration[trafficlight.currentLightStateIndex];
-            
+
             // light on the first state
             trafficlight.TurnLightState(trafficlight.currentLightStateIndex);
 
@@ -142,9 +155,15 @@ public class TrafficLightControllerV2 : MonoBehaviour
 
             temp_index++;
         }
+    }
 
+    /// <summary>
+    /// Initialize ped_Light_UGRP and rightTurn_light_UGRP
+    /// </summary>
+    void PedRightLightInit()
+    {
         // pedlight의 상태를 init
-        temp_index = 0;
+        int temp_index = 0;
         if (pedestrainLights.Length > 0)
         {
             foreach (ped_light_UGRP pedlight in pedestrainLights)
@@ -168,7 +187,7 @@ public class TrafficLightControllerV2 : MonoBehaviour
                     pedlight.pedSideTrafficlight02 = (pedlight.trafficLightLocation + 3) % 4;
 
                     // rightTurnlight to init
-                
+
                     pedlight.pedControlRightlight = (pedlight.trafficLightLocation + 3) % 4;
                     if (rightTurnLights[pedlight.pedControlRightlight].trafficLightType == 0)
                     {
@@ -176,9 +195,9 @@ public class TrafficLightControllerV2 : MonoBehaviour
                     }
 
                     // child light init : 대각선 신호등은 모두 동일하게 움직이니 child light이 필요 X
-                    if(pedlight.pedChildLights.Length > 0)
+                    if (pedlight.pedChildLights.Length > 0)
                     {
-                        foreach(ped_light_UGRP childlight in pedlight.pedChildLights)
+                        foreach (ped_light_UGRP childlight in pedlight.pedChildLights)
                         {
                             childlight.ResetLight();
                             childlight.lightStates = temp_light.lightStates;
@@ -215,12 +234,15 @@ public class TrafficLightControllerV2 : MonoBehaviour
                     // lightState init
                     LightStatesGeneratorV2 temp_light = new LightStatesGeneratorV2(rightlight.trafficLightType);
                     rightlight.lightStates = temp_light.lightStates;
-                    
+
                     // Location init
                     rightlight.trafficLightLocation = temp_index;
 
                     // isRightlightActive init
                     rightlight.isRightlightActive = rightLightActive[temp_index];
+
+                    // isRightProhibitSignActive init
+                    rightlight.isRightProhibitSignActive = rightTurnProhibitActive[temp_index];
 
                     if (rightlight.isRightlightActive)
                     {
@@ -241,22 +263,38 @@ public class TrafficLightControllerV2 : MonoBehaviour
                     else
                     {
                         rightlight.bodystructure.SetActive(false);
-                        rightlight.trafficSign.SetActive(false);
+                        
                         for (int i = 0; i < rightlight.lights.Length; i++)
                         {
                             rightlight.LightOff(i);
                         }
                     }
+
+                    // right turn prohibit sign이 보이면 안될 때 가려준다.
+                    if (!rightlight.isRightProhibitSignActive)
+                    {
+                        rightlight.trafficSign.SetActive(false);
+                    }
+
                     temp_index++;
                 }
             }
         }
     }
 
+
     // Update is called once per frame
     void Update()
     {
-        
+        UpdateCarLight();
+        UpdatePedRightLight();
+    }
+
+    /// <summary>
+    /// Update Car Light State
+    /// </summary>
+    void UpdateCarLight()
+    {
         // 차량 신호등을 update
         foreach (car_light_UGRP trafficlight in trafficLights)
         {
@@ -283,9 +321,15 @@ public class TrafficLightControllerV2 : MonoBehaviour
                 }
             }
         }
-        
+    }
 
-        if (pedestrainLights.Length > 0) { 
+    /// <summary>
+    /// Update Ped Light and Right Light
+    /// </summary>
+    void UpdatePedRightLight()
+    {
+        if (pedestrainLights.Length > 0)
+        {
             // 보행자 신호등을 update
             foreach (ped_light_UGRP pedlight in pedestrainLights)
             {

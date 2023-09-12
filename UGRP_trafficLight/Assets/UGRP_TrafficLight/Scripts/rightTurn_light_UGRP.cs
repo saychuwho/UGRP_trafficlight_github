@@ -7,6 +7,9 @@ public class rightTurn_light_UGRP : traffic_light_UGRP
     // rightlight의 Active 여부를 나타냄
     [HideInInspector] public bool isRightlightActive = true;
 
+    // right turn traffic sign의 나타남 여부를 저장
+    [HideInInspector] public bool isRightProhibitSignActive = true;
+
     // right turn light의 경우에도, 자신이 고려해야 하는 신호가 무엇인지 저장해둘 필요가 있다.
     [HideInInspector] public int rightFrontTrafficlight = 0;
     [HideInInspector] public int rightSidePedlight = 0;
