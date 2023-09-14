@@ -18,6 +18,9 @@ using System.Linq;
 // 전적으로 이 신호 logic은 사거리에서만 동작하도록 짜여짐
 public class TrafficLightControllerV2 : MonoBehaviour
 {
+    // 한국 신호체계를 사용할 것인지, 뉴욕 신호체계를 사용할 것인지를 결정
+    public bool isKoreanTrafficRule = true;
+
     public car_light_UGRP[] trafficLights;
     public ped_light_UGRP[] pedestrainLights;
     public rightTurn_light_UGRP[] rightTurnLights;
@@ -44,14 +47,17 @@ public class TrafficLightControllerV2 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        CarLightInit();
-        PedRightLightInit();
+        if (isKoreanTrafficRule)
+        {
+            KRCarLightInit();
+            KRPedRightLightInit();
+        }
     }
 
     /// <summary>
-    /// Initialize car_light_UGRP
+    /// Initialize car_light_UGRP by KR Rule
     /// </summary>
-    void CarLightInit()
+    void KRCarLightInit()
     {
         // trafficlight의 상태를 init
         int temp_index = 0;
@@ -158,9 +164,9 @@ public class TrafficLightControllerV2 : MonoBehaviour
     }
 
     /// <summary>
-    /// Initialize ped_Light_UGRP and rightTurn_light_UGRP
+    /// Initialize ped_Light_UGRP and rightTurn_light_UGRP by KR Rule
     /// </summary>
-    void PedRightLightInit()
+    void KRPedRightLightInit()
     {
         // pedlight의 상태를 init
         int temp_index = 0;
@@ -286,14 +292,17 @@ public class TrafficLightControllerV2 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        UpdateCarLight();
-        UpdatePedRightLight();
+        if (isKoreanTrafficRule)
+        {
+            KRUpdateCarLight();
+            KRUpdatePedRightLight();
+        }
     }
 
     /// <summary>
-    /// Update Car Light State
+    /// Update Car Light State by KR Traffic Rule
     /// </summary>
-    void UpdateCarLight()
+    void KRUpdateCarLight()
     {
         // 차량 신호등을 update
         foreach (car_light_UGRP trafficlight in trafficLights)
@@ -324,9 +333,9 @@ public class TrafficLightControllerV2 : MonoBehaviour
     }
 
     /// <summary>
-    /// Update Ped Light and Right Light
+    /// Update Ped Light and Right Light by KR Traffic Rule
     /// </summary>
-    void UpdatePedRightLight()
+    void KRUpdatePedRightLight()
     {
         if (pedestrainLights.Length > 0)
         {
