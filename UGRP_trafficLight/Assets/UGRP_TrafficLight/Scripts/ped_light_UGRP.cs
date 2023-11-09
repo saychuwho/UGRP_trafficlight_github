@@ -11,6 +11,8 @@ public class ped_light_UGRP : traffic_light_UGRP
     [HideInInspector] public int pedSideTrafficlight01 = 0;
     // 보행자 신호등을 기준으로 오른쪽 차량 신호등
     [HideInInspector] public int pedSideTrafficlight02 = 0;
+    // 보행자 신호등의 현재 위치에 있는 traffic light
+    [HideInInspector] public int pedThisTrafficlight = 0;
 
     [HideInInspector] public int pedIndicator01 = 0;
 

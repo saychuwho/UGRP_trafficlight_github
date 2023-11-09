@@ -215,6 +215,12 @@ public class LightStatesGeneratorV2
                 lightStates.Add(new int[] { 0, 0, 1 });
                 break;
 
+            case 500: // standard light state of 3 light : used in New York Light
+                lightStates.Add(new int[] { 1, 0, 0 });
+                lightStates.Add(new int[] { 0, 1, 0 });
+                lightStates.Add(new int[] { 0, 0, 1 });
+                break;
+
             case 510: // 비보호 좌회전 : 모든 신호가 동시에 안멈춤
                 lightStates.Add(new int[] { 1, 0, 0 });
                 lightStates.Add(new int[] { 2, 0, 0 });
